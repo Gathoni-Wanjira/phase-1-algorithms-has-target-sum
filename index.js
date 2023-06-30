@@ -1,4 +1,27 @@
 function hasTargetSum(array, target) {
+  // const sumArray = array.reduce((total, amount) => total + amount) 
+  // if (sumArray === target){
+  //   return true;
+  // } 
+  // else{
+  //   return false;
+  // } 
+  let total 
+  for(let i =0; i< array.length; i++){
+    console.log(array[i])
+     for (let j =0 ; j < array.length; j++){
+     console.log(array[j])
+      total = (array[i] + array[j])
+      console.log(total);
+      if (total === target && i !== j){
+        return true;
+      }
+      else if (total !== target){
+        return false;
+      }
+     }
+  }
+
   // Write your algorithm here
 }
 
@@ -12,6 +35,9 @@ function hasTargetSum(array, target) {
 
 /*
   Add written explanation of your solution here
+  i is a placeholder for each element in array
+  loop through the array. let the first array element to have 0 index. 
+  then let the condition to state that we are looping trough the whole array thus array.length
 */
 
 // You can run `node index.js` to view these console logs
